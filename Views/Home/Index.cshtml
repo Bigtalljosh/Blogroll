@@ -2,105 +2,373 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <!-- Title -->
+    <title>BigTallJosh</title>
+    <!-- Meta -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Favicon -->
+    <link href="favicon.html" rel="shortcut icon">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nexus.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css" rel="stylesheet">
+    <!-- Google Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="header" class="container">
+        <div class="row">
+            <!-- Top Menu -->
+            <div class="col-md-12 margin-top-30">
+                <div id="hornav" class="pull-right visible-lg">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li>
+                            <span>Reviews</span>
+                            <ul>
+                                <li class="parent">
+                                    <span>Games</span>
+                                    <ul>
+                                        <li><a href="features-typo-basic.html">Basic Typography</a></li>
+                                        <li><a href="features-typo-blockquotes.html">Blockquotes</a></li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <span>Movies & TV</span>
+                                    <ul>
+                                        <li><a href="features-labels.html">Labels</a></li>
+                                        <li><a href="features-progress-bars.html">Progress Bars</a></li>
+                                        <li><a href="features-panels.html">Panels</a></li>
+                                        <li><a href="features-pagination.html">Pagination</a></li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <span>Tech</span>
+                                    <ul>
+                                        <li><a href="features-icons.html">Icons General</a></li>
+                                        <li><a href="features-icons-social.html">Social Icons</a></li>
+                                        <li><a href="features-icons-font-awesome.html">Font Awesome</a></li>
+                                        <li><a href="features-icons-glyphicons.html">Glyphicons</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Popular</span>
+                            <ul>
+                                <li><a href="pages-about-us.html">About Us</a></li>
+                                <li><a href="pages-services.html">Services</a></li>
+                                <li><a href="pages-faq.html">F.A.Q.</a></li>
+                                <li><a href="pages-about-me.html">About Me</a></li>
+                                <li><a href="pages-full-width.html">Full Width</a></li>
+                                <li><a href="pages-left-sidebar.html">Left Sidebar</a></li>
+                                <li><a href="pages-right-sidebar.html">Right Sidebar</a></li>
+                                <li><a href="pages-login.html">Login</a></li>
+                                <li><a href="pages-sign-up.html">Sign-Up</a></li>
+                                <li><a href="pages-404.html">404 Error Page</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Portfolio</span>
+                            <ul>
+                                <li><a href="portfolio-2-column.html">2 Column</a></li>
+                                <li><a href="portfolio-3-column.html">3 Column</a></li>
+                                <li><a href="portfolio-4-column.html">4 Column</a></li>
+                                <li><a href="portfolio-6-column.html">6 Column</a></li>
+                            </ul>
+                        </li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Blogs">Blog</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
+            <div class="clear"></div>
+            <!-- End Top Menu -->
         </div>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+    <!-- === END HEADER === -->
+    <!-- === BEGIN CONTENT === -->
+    <div id="content" class="container">
+        <div class="row margin-top-10">
+            <!-- Carousel Slideshow -->
+            <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                <!-- Carousel Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example" data-slide-to="1"></li>
+                    <li data-target="#carousel-example" data-slide-to="2"></li>
+                </ol>
+                <!-- End Carousel Indicators -->
+                <!-- Carousel Images -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/slideshow/slide1.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="images/slideshow/slide2.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="images/slideshow/slide3.jpg">
+                    </div>
+                    <div class="item">
+                        <img src="images/slideshow/slide4.jpg">
+                    </div>
+                </div>
+                <!-- End Carousel Images -->
+                <!-- Carousel Controls -->
+                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+                <!-- End Carousel Controls -->
+            </div>
+            <!-- End Carousel Slideshow -->
+        </div>
+        <div class="row margin-vert-30">
+            <!-- Main Text -->
+            <div class="col-md-9">
+                <h2>trackbone</h2>
+                <p>trackbone is a site set up by Josh Dadak in order to learn a multitude of new technologies. In doing so it becomes a kind of live portfolio. I will develop and host a blog, host reviews of various films, tv and tech and showcase some of the work I can share  publically.</p>
+            </div>
+            <!-- End Main Text -->
+            <!-- Side Column -->
+            <div class="col-md-3">
+                <h3 class="margin-bottom-10">Other Sites</h3>
+                <ul class="menu">
+                    <li>
+                        <a class="fa-angle-right" href="http://www.joshisaweso.me">Current Website</a>
+                    </li>
+                    <li>
+                        <a class="fa-angle-right" href="http://www.twitter.com/josh_dalek">Twitter</a>
+                    </li>
+                    <li>
+                        <a class="fa-angle-right" href="http://www.youtube.com/bigtalljoshcouk">YouTube</a>
+                    </li>
+                    <li>
+                        <a class="fa-angle-right" href="https://about.me/bigtalljosh">About.me</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Side Column -->
+        </div>
+        <div class="row">
+            <!-- Portfolio -->
+            <!-- Portfolio Item -->
+            <div class="portfolio-item col-sm-4 animate fadeIn">
+                <div class="image-hover">
+                    <a href="#">
+                        <figure>
+                            <img src="images/frontpage/filler1.jpg" alt="image1">
+                            <div class="overlay">
+                                <a class="expand" href="#">Image Link</a>
+                            </div>
+                        </figure>
+                        <h3 class="margin-top-20">trackbone</h3>
+                        <p class="margin-top-10 margin-bottom-20">This page itself is one of my highlighted pieces.</p>
+                        <div class="btn btn-default">
+                            <a class="info" href="http://localhost/build/substance/index.php/quam-nunc-putamus">Read more</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- //Portfolio Item// -->
+            <!-- Portfolio Item -->
+            <div class="portfolio-item col-sm-4 animate fadeIn">
+                <div class="image-hover">
+                    <a href="#">
+                        <figure>
+                            <img src="images/frontpage/filler2.jpg" alt="image2">
+                            <div class="overlay">
+                                <a class="expand" href="#">Image Link</a>
+                            </div>
+                        </figure>
+                        <h3 class="margin-top-20">Firelor</h3>
+                        <p class="margin-top-10 margin-bottom-20">Firelor is an adventure tile-based game wrote in C# using MonoGame.</p>
+                        <div class="btn btn-default">
+                            <a class="info" href="http://localhost/build/substance/index.php/quam-nunc-putamus">Read more</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- //Portfolio Item// -->
+            <!-- Portfolio Item -->
+            <div class="portfolio-item col-sm-4 animate fadeIn">
+                <div class="image-hover">
+                    <a href="#">
+                        <figure>
+                            <img src="images/frontpage/filler3.jpg" alt="image3">
+                            <div class="overlay">
+                                <a class="expand" href="#">Image Link</a>
+                            </div>
+                        </figure>
+                        <h3 class="margin-top-20">Shooty Pow Pow</h3>
+                        <p class="margin-top-10 margin-bottom-20">Shooty Pow Pow is a game wrote in C# as part of the Windows 10 Games Jam in 2015. It features various features such as; procedulary generated maps, a partical bullet system, automatic camera zooming based upon both players positions, double xbox controller support.</p>
+                        <div class="btn btn-default">
+                            <a class="info" href="http://localhost/build/substance/index.php/quam-nunc-putamus">Read more</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- //Portfolio Item// -->
+            <!-- End Portfolio -->
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+    <!-- === BEGIN FOOTER === -->
+    <div id="base">
+        <div class="container padding-vert-30">
+            <div class="row">
+                <!-- Thumbs Gallery -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Portfolio Highlights</h3>
+                    <div class="thumbs-gallery">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image1.jpg">
+                            <img src="images/thumbsgallery/thumbs/image1.jpg" alt="image1.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image2.jpg">
+                            <img src="images/thumbsgallery/thumbs/image2.jpg" alt="image2.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image3.jpg">
+                            <img src="images/thumbsgallery/thumbs/image3.jpg" alt="image3.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image4.jpg">
+                            <img src="images/thumbsgallery/thumbs/image4.jpg" alt="image4.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image6.jpg">
+                            <img src="images/thumbsgallery/thumbs/image6.jpg" alt="image6.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image7.jpg">
+                            <img src="images/thumbsgallery/thumbs/image7.jpg" alt="image7.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image8.jpg">
+                            <img src="images/thumbsgallery/thumbs/image8.jpg" alt="image8.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image9.jpg">
+                            <img src="images/thumbsgallery/thumbs/image9.jpg" alt="image9.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image92.jpg">
+                            <img src="images/thumbsgallery/thumbs/image92.jpg" alt="image92.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image94.jpg">
+                            <img src="images/thumbsgallery/thumbs/image94.jpg" alt="image94.jpg">
+                            <i></i>
+                        </a>
+
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image95.jpg">
+                            <img src="images/thumbsgallery/thumbs/image95.jpg" alt="image95.jpg">
+                            <i></i>
+                        </a>
+
+                        <a class="thumbBox" rel="lightbox-thumbs" href="images/thumbsgallery/image96.jpg">
+                            <img src="images/thumbsgallery/thumbs/image96.jpg" alt="image96.jpg">
+                            <i></i>
+                        </a>
+
+                    </div>			<div class="clearfix"></div>
+                </div>
+                <!-- End Thumbs Gallery -->
+                <!-- Contact Details -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Contact Details</h3>
+                    <p>
+                        Email: <a href="mailto:josh@joshisaweso.me">josh@joshisaweso.me</a><br />
+                        Website: <a href="http://joshisaweso.me/">Personal Website</a>
+                    </p>
+                </div>
+                <!-- End Contact Details -->
+                <!-- Sample Menu -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Sample Menu</h3>
+                    <ul class="menu">
+                        <li>
+                            <a class="fa-github" href="https://github.com/bigtalljosh">GitHub</a>
+                        </li>
+                        <li>
+                            <a class="fa-twitter" href="http://twitter.com/josh_dalek">Twitter</a>
+                        </li>
+                        <li>
+                            <a class="fa-youtube-play" href="http://youtube.com/bigtalljoshcouk">YouTube</a>
+                        </li>
+                        <li>
+                            <a class="fa-twitch" href="http://twitch.tv/bigtalljosh">Twitch</a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- End Sample Menu -->
+                <!-- Disclaimer -->
+                <div class="col-md-3 margin-bottom-20">
+                    <h3 class="margin-bottom-10">Disclaimer</h3>
+                    <p>All stock images on this template demo are for presentation purposes only, intended to represent a live site and are not included with this template.</p>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- End Disclaimer -->
+                <div class="clearfix"></div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <!-- Isotope - Portfolio Sorting -->
+    <script type="text/javascript" src="js/jquery.isotope.js" type="text/javascript"></script>
+    <!-- Mobile Menu - Slicknav -->
+    <script type="text/javascript" src="js/jquery.slicknav.js" type="text/javascript"></script>
+    <!-- Animate on Scroll-->
+    <script type="text/javascript" src="js/jquery.visible.js" charset="utf-8"></script>
+    <!-- Slimbox2-->
+    <script type="text/javascript" src="js/slimbox2.js" charset="utf-8"></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.custom.js" type="text/javascript"></script>
+    <!-- End JS -->
+</body>
+</html>
